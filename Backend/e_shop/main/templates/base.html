@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ecommerce Bootstrap Template</title>
+	<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+	<style>
+        .navbar-brand {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2em;
+            color: blue;
+        }
+    </style>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" type="text/css" href="{% static 'fontawesome-free/css/all.min.css' %}" />
+	<!-- Bootstrap 4 CSS -->
+	<link rel="stylesheet" type="text/css" href="{% static 'bs4/bootstrap.min.css' %}" />
+	<!-- Main Jquery -->
+	<script type="text/javascript" src="{% static 'jquery.min.js' %}"></script>
+	<!-- Bootstrap 4 JS -->
+	<script type="text/javascript" src="{% static 'bs4/bootstrap.min.js' %}"></script>
+</head>
+<body>
+	<nav style="background-color: #C0D9E2 !important;" class="navbar navbar-expand-lg navbar-dark bg-danger" >
+		<div class="container" >
+			<a class="navbar-brand" style="color: #003399 !important; font-size: 2.5em !important;" href="<?php echo $baseUrl; ?>">Jewelry Online Boutique</a>
+
+
+
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNav">
+		    <ul class="navbar-nav ml-auto">
+		      <li class="nav-item">
+		        <a style="color: #003399 !important;" class="nav-link text-white" href="<?php echo $baseUrl; ?>">Home</a>
+		      </li>
+		      <li class="nav-item">
+		        <a style="color: #003399 !important;" class="nav-link text-white" href="<?php echo $baseUrl; ?>/categories.php">Categories</a>
+		      </li>
+		      <li class="nav-item">
+		        <a style="color: #003399 !important;" class="nav-link text-white" href="<?php echo $baseUrl; ?>/brands.php">Brands</a>
+		      </li>
+		      <li class="nav-item">
+		        <a style="color: #003399 !important;" class="nav-link text-white" href="<?php echo $baseUrl; ?>/cart.php"><i class="fa fa-shopping-cart"></i> Cart (2)</a>
+		      </li>
+		      <li class="nav-item">
+		        <a style="color: #003399 !important;" class="nav-link text-white" href="<?php echo $baseUrl; ?>/account.php"><i class="fa fa-user"></i> My Account</a>
+		      </li>
+		    </ul>
+		  </div>
+		</div>
+	</nav>
+
+  {% block content %}
+  {% endblock %}
+
+  <footer class="pt-4 my-md-5 pt-md-5 border-top container">
+      <div class="row">
+        <div class="col-12 col-md">
+          <a style="font-family: 'Great Vibes', cursive; font-size: 1.5em !important; color: #003399 !important;" href="#">Jewelry Online Boutique</a>
+          <small class="d-block mb-3 text-muted">&copy; 2023-2027</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Features</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Random feature</a></li>
+            <li><a class="text-muted" href="#">Team feature</a></li>
+            <li><a class="text-muted" href="#">Stuff for developers</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Resource</a></li>
+            <li><a class="text-muted" href="#">Resource name</a></li>
+            <li><a class="text-muted" href="#">Another resource</a></li>
+            <li><a class="text-muted" href="#">Final resource</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>About</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Team</a></li>
+            <li><a class="text-muted" href="#">Locations</a></li>
+            <li><a class="text-muted" href="#">Privacy</a></li>
+            <li><a class="text-muted" href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+  </html>
